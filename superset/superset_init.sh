@@ -1,6 +1,6 @@
 #!/bin/bash
 # =============================================================================
-# superset_init.sh — Script de inicializacion de Apache Superset
+# superset_init.sh â€” Script de inicializacion de Apache Superset
 #
 # Ejecutado como comando de arranque del contenedor. Realiza en orden:
 #   1. Migracion del esquema interno de metadatos de Superset (SQLite).
