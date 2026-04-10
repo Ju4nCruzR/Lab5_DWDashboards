@@ -1,0 +1,22 @@
+# =============================================================================
+# requirements.txt — Dependencias del entorno Jupyter para el pipeline ETL
+#
+# Instaladas automaticamente por el comando de arranque del contenedor jupyter
+# definido en compose.yaml. Se dividen en tres grupos funcionales:
+#
+#   1. Conexion y consulta a PostgreSQL (OLTP)
+#   2. Manipulacion y transformacion de datos
+#   3. Conexion y carga en ClickHouse (OLAP) con soporte columnar via PyArrow
+# =============================================================================
+
+# --- Conexion a PostgreSQL ---
+sqlalchemy==2.0.36
+psycopg2-binary==2.9.10
+
+# --- Manipulacion de datos ---
+pandas==2.2.3
+matplotlib==3.9.3
+
+# --- Conexion a ClickHouse y transferencia columnar ---
+clickhouse-connect==0.8.9
+pyarrow==18.1.0
