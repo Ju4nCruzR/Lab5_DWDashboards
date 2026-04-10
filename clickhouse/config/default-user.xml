@@ -1,0 +1,27 @@
+<!-- =============================================================================
+     default-user.xml — Eliminacion del usuario anonimo por defecto de ClickHouse
+
+     La imagen oficial de ClickHouse incluye un usuario 'default' sin contrasena
+     que representa un riesgo de seguridad. Este archivo lo elimina mediante el
+     atributo remove="remove" y redeclara el usuario admin como unico acceso
+     valido al sistema.
+
+     ADVERTENCIA: Credenciales de uso didactico exclusivamente.
+     ============================================================================= -->
+<clickhouse>
+    <users>
+        <!-- Elimina el usuario default sin contrasena que viene en la imagen base -->
+        <default remove="remove">
+        </default>
+
+        <admin>
+            <profile>default</profile>
+            <networks>
+                <ip>::/0</ip>
+            </networks>
+            <password><![CDATA[admin123]]></password>
+            <quota>default</quota>
+            <access_management>1</access_management>
+        </admin>
+    </users>
+</clickhouse>

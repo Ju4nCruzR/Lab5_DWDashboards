@@ -1,0 +1,23 @@
+<!-- =============================================================================
+     admin-user.xml — Configuracion del usuario administrador de ClickHouse
+
+     Define el perfil, la red permitida, la contrasena y los permisos de gestion
+     de acceso para el usuario admin. La directiva access_management en 1 permite
+     que este usuario cree otros usuarios y roles mediante sentencias SQL.
+
+     ADVERTENCIA: Credenciales de uso didactico exclusivamente.
+     ============================================================================= -->
+<clickhouse>
+    <users>
+        <admin>
+            <profile>default</profile>
+            <networks>
+                <!-- Permite conexiones desde cualquier direccion IP -->
+                <ip>::/0</ip>
+            </networks>
+            <password>admin123</password>
+            <quota>default</quota>
+            <access_management>1</access_management>
+        </admin>
+    </users>
+</clickhouse>
