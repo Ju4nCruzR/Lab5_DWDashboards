@@ -1,0 +1,9 @@
+# =============================================================================
+# requirements.txt — Dependencias de Superset para conexion a ClickHouse
+#
+# clickhouse-connect provee el dialecto SQLAlchemy necesario para que Superset
+# registre y consulte la base de datos analytics en ClickHouse a traves de
+# la URI clickhouse+http://.
+# =============================================================================
+
+clickhouse-connect==0.8.9
